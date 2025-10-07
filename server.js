@@ -9,7 +9,10 @@ const app = express();
 // 強化 CORS 設定：允許正式前端、localhost、Vercel 預覽，以及 TWA/部分情況下的 null Origin
 const allowedOrigins = [
   'https://homeletter2-0-frontend.vercel.app',
-  'http://localhost:3000'
+  'http://localhost:3000',
+  'http://localhost:8000',
+  'http://127.0.0.1:8000',
+  'http://127.0.0.1:3000'
 ];
 // 環境開關：測試階段允許所有來源（CORS_ALLOW_ALL=1/true/yes/on/*）
 const CORS_ALLOW_ALL = String(process.env.CORS_ALLOW_ALL || '').toLowerCase();
